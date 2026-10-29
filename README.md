@@ -2,6 +2,8 @@
 
 A small student productivity website for keeping study tasks and deadlines in one place. Built as a beginner-friendly portfolio project with plain HTML, CSS, and JavaScript.
 
+**Live site:** https://parsmlt.github.io/student_space/
+
 ## Features
 
 - Add tasks with a subject and optional deadline
