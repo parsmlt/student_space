@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple overview of study tasks and upcoming deadlines.">
+    <title>My Dashboard — Study Space</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="page dashboard-page">
+      <header class="topbar">
+        <a class="brand" href="index.html" aria-label="Study Space home">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>Study Space</span>
+        </a>
+        <div class="topbar-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false"><span aria-hidden="true">☾</span><span data-theme-label>Dark mode</span></button>
+          <a class="today-label nav-link" href="index.html">← BACK HOME</a>
+        </div>
+      </header>
+
+      <section class="dashboard-heading" aria-labelledby="page-title">
+        <p class="eyebrow">YOUR STUDY SPACE</p>
+        <h1 id="page-title">A little progress adds up.</h1>
+        <p class="intro">Here’s a simple view of what you’re working on and what’s coming up.</p>
+      </section>
+
+      <section class="summary-grid" aria-label="Task summary">
+        <article class="summary-card"><span class="summary-number" id="todo-count">0</span><span class="summary-label">Tasks to do</span></article>
+        <article class="summary-card"><span class="summary-number" id="week-count">0</span><span class="summary-label">Due this week</span></article>
+        <article class="summary-card"><span class="summary-number" id="done-count">0</span><span class="summary-label">Completed</span></article>
+      </section>
+
+      <section class="tasks-section task-editor" aria-labelledby="form-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">MAKE A PLAN</p>
+            <h2 id="form-title">Add a task</h2>
+          </div>
+        </div>
+        <form id="task-form">
+          <label class="field"><span>Task name</span><input id="task-title" name="title" type="text" maxlength="100" placeholder="e.g. Read chapter 3" required></label>
+          <label class="field"><span>Subject</span><input id="task-subject" name="subject" type="text" maxlength="40" placeholder="e.g. Biology"></label>
+          <label class="field"><span>Deadline</span><input id="task-date" name="dueDate" type="date"></label>
+          <div class="form-actions">
+            <button class="button" id="save-task" type="submit">Add task</button>
+            <button class="text-button" id="cancel-edit" type="button" hidden>Cancel</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="tasks-section" aria-labelledby="tasks-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR PLAN</p>
+            <h2 id="tasks-title">Study tasks</h2>
+          </div>
+          <span class="sample-label">SAVED IN THIS BROWSER</span>
+        </div>
+        <ul class="task-list" id="task-list" aria-live="polite"></ul>
+        <p class="empty-message" id="empty-message" hidden>No tasks yet. Add one above to get started.</p>
+        <p class="learning-note" id="storage-message" role="status">Your tasks stay in this browser on this device.</p>
+      </section>
+
+      <footer>Made for focused days and small wins.</footer>
+    </main>
+  </body>
+</html>
