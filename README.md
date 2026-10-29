@@ -1,4 +1,4 @@
-# Study Space
+# Student Dashboard
 
 A small student productivity website for keeping study tasks and deadlines in one place. Built as a beginner-friendly portfolio project with plain HTML, CSS, and JavaScript.
 
